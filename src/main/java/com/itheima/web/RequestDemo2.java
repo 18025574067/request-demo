@@ -27,6 +27,7 @@ public class RequestDemo2 extends HttpServlet {
             for (String value : values) {
                 System.out.println(value + " ");
             }
+            System.out.println();
         }
     }
 
@@ -34,6 +35,5 @@ public class RequestDemo2 extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //POST请求逻辑
 
-        this.doGet(req, resp);
     }
 }
