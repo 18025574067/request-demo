@@ -49,6 +49,5 @@ public class RequestDemo1 extends HttpServlet {
         // 2. 读取数据
         String line = br.readLine();
         System.out.println(line);
-
     }
 }
