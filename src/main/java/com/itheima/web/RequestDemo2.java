@@ -15,7 +15,7 @@ public class RequestDemo2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // GET请求逻辑
-        System.out.println("get....");
+        // System.out.println("get....");
 
         // 1. 获取所有参数的map集合
         Map<String, String[]> map = req.getParameterMap();
@@ -51,7 +51,10 @@ public class RequestDemo2 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //POST请求逻辑
-        System.out.println("post....");
+        this.doGet(req, resp);
+
+
+        /** System.out.println("post....");
 
         // 1. 获取所有参数的map集合
         Map<String, String[]> map = req.getParameterMap();
@@ -69,7 +72,7 @@ public class RequestDemo2 extends HttpServlet {
         System.out.println("====================");
 
         // 2. 根据参数值来获取参数值，数组
-        String[] hobbies = req.getParameterValues("username");
+        String[] hobbies = req.getParameterValues("hobby");
         for (String hobby : hobbies) {
             System.out.println(hobby);
         }
@@ -82,5 +85,6 @@ public class RequestDemo2 extends HttpServlet {
 
         System.out.println(username);
         System.out.println(password);
+     */
     }
 }
