@@ -51,11 +51,11 @@ public class RequestDemo2 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //POST请求逻辑
+        System.out.println("post....");
         this.doGet(req, resp);
 
 
-        /** System.out.println("post....");
-
+        /**
         // 1. 获取所有参数的map集合
         Map<String, String[]> map = req.getParameterMap();
         for (String key : map.keySet()) {
