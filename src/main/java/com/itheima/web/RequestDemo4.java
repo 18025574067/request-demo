@@ -13,6 +13,14 @@ public class RequestDemo4 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 1. 解决乱码：POST：getReader()
+        req.setCharacterEncoding("UTF-8");
+
+        // 2. 获取username
+        String username = req.getParameter("username");
+        System.out.println(username);
+
+
     }
 
     @Override
