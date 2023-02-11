@@ -21,6 +21,10 @@ public class RequestDemo4 extends HttpServlet {
         System.out.println(username);
 
 
+        // 3. get 获取参数的方式： getQueryString
+
+
+
     }
 
     @Override
