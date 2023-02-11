@@ -9,12 +9,12 @@ public class URLDemo {
     public static void main(String[] args) throws UnsupportedEncodingException {
         String username = "张三";
 
-        // 1. URL编码
+        // 1. URL编码   浏览器做的步骤
         String encode = URLEncoder.encode(username, "UTF-8");
         System.out.println(encode);
 
         System.out.println("================");
-        // 2. URL解码
+        // 2. URL解码    tomcat做的步骤
 //        String decode = URLDecoder.decode(encode, "UTF-8"); // 张三
         String decode = URLDecoder.decode(encode, "ISO-8859-1"); // å¼ ä¸
         System.out.println(decode);

@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 
 @WebServlet("/req4")
@@ -22,7 +23,10 @@ public class RequestDemo4 extends HttpServlet {
 
 
         // 3. get 获取参数的方式： getQueryString
-
+        // 乱码原因：tomcat进行URL解码，默认的字符集为ISO-8859-1
+        byte[] bytes = username.getBytes("ISO8859-1");
+        String s = new String(bytes, "UTF-8");
+        System.out.println(s);
 
 
     }
