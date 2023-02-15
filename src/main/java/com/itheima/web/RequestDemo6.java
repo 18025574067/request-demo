@@ -16,6 +16,10 @@ public class RequestDemo6 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("demo6...");
+
+        Object msg = req.getAttribute("msg");
+        System.out.println(msg);
+
     }
 
     @Override

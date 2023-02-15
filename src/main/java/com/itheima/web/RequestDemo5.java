@@ -18,6 +18,9 @@ public class RequestDemo5 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("demo5...");
 
+        // 存储数据
+        req.setAttribute("msg", "hello");
+
         // 请求转发
         req.getRequestDispatcher("/req6").forward(req, resp);
     }
