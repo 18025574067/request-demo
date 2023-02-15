@@ -18,7 +18,7 @@ public class RequestDemo4 extends HttpServlet {
 
         // 2. 获取username
         String username = req.getParameter("username");
-        System.out.println(username);
+        System.out.println("解决乱码前：" + username);
 
 
         // 3. get 获取参数的方式： getQueryString
@@ -26,8 +26,8 @@ public class RequestDemo4 extends HttpServlet {
         // 3.1 先对乱码数据进行编码：转为字节数组 
         byte[] bytes = username.getBytes("ISO8859-1");
         // 3.2 字节数组解码
-        String s = new String(bytes, "UTF-8");
-        System.out.println(s);
+        username = new String(bytes, "UTF-8");
+        System.out.println("解决乱码后：" + username);
 
 
     }
