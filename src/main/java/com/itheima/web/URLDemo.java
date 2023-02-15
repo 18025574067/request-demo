@@ -19,11 +19,17 @@ public class URLDemo {
         String decode = URLDecoder.decode(encode, "ISO-8859-1"); // å¼ ä¸
         System.out.println(decode);
 
+        System.out.println("=================");
+
         // 3. 转换为字节数组   编码过程
         byte[] bytes = decode.getBytes("ISO-8859-1");
-//        for (byte b : bytes) {
-//            System.out.print(b + " ");
-//        }
+        for (byte b : bytes) {
+            System.out.print(b + " ");
+        }
+
+        System.out.println();
+
+        System.out.println("=================");
 
         // 4. 将字节数组转换为字符串   解码过程
         String s = new String(bytes, "UTF-8");
