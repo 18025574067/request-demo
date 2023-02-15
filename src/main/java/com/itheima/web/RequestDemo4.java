@@ -29,6 +29,7 @@ public class RequestDemo4 extends HttpServlet {
 //        // 3.2 字节数组解码
 //        username = new String(bytes, "UTF-8");
 
+        // 简化写法：
         username = new String(username.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
         System.out.println("解决乱码后：" + username);
     }

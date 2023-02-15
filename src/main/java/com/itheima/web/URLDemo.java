@@ -22,7 +22,7 @@ public class URLDemo {
         System.out.println("=================");
 
         // 3. 转换为字节数组   编码过程
-        byte[] bytes = decode.getBytes("ISO-8859-1");
+        byte[] bytes = decode.getBytes(StandardCharsets.ISO_8859_1);
         for (byte b : bytes) {
             System.out.print(b + " ");
         }
@@ -32,8 +32,7 @@ public class URLDemo {
         System.out.println("=================");
 
         // 4. 将字节数组转换为字符串   解码过程
-        String s = new String(bytes, "UTF-8");
+        String s = new String(bytes, StandardCharsets.UTF_8);
         System.out.println(s);
-
     }
 }
