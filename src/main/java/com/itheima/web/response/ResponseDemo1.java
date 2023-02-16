@@ -18,12 +18,14 @@ public class ResponseDemo1 extends HttpServlet {
         System.out.println("resp1...");
 
         // 重定向
-        // 1. 设置响应状态码：302
-        resp.setStatus(302);
+//        // 1. 设置响应状态码：302
+//        resp.setStatus(302);
+//
+//        // 2. 设置响应头：location
+//        resp.setHeader("location", "/request-demo/resp2");
 
-        // 2. 设置响应头：location
-        resp.setHeader("location", "/request-demo/resp2");
-
+        // 重定向简化写法
+        resp.sendRedirect("/request-demo/resp2");
     }
 
     @Override
