@@ -1,4 +1,4 @@
-package com.itheima.web;
+package com.itheima.web.request;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,23 +6,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 /**
  * 请求转发
  */
-@WebServlet("/req5")
-public class RequestDemo5 extends HttpServlet {
+@WebServlet("/req6")
+public class RequestDemo6 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("demo5...");
+        System.out.println("demo6...");
 
-        // 存储数据
-        req.setAttribute("msg", "hello");
+        Object msg = req.getAttribute("msg");
+        System.out.println(msg);
 
-        // 请求转发
-        req.getRequestDispatcher("/req6").forward(req, resp);
     }
 
     @Override
