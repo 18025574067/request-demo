@@ -1,10 +1,10 @@
-package com.itheima.web;
+package com.itheima.web.request;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
-@WebServlet("/demo1")
+@WebServlet("/demo5")
 public class ServletDemo1 implements Servlet {
     public void init(ServletConfig servletConfig) throws ServletException {
 
