@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-
+/**
+ * 中文乱码解决方案。
+ */
 @WebServlet("/req4")
 public class RequestDemo4 extends HttpServlet {
 
