@@ -33,3 +33,5 @@
 0:0:0:0:0:0:0:1 - - [17/Feb/2023:23:31:14 +0800] "GET /request-demo/ HTTP/1.1" 200 57 http-bio-8080-exec-3 201
 0:0:0:0:0:0:0:1 - - [17/Feb/2023:23:31:16 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
 0:0:0:0:0:0:0:1 - - [17/Feb/2023:23:31:27 +0800] "GET /request-demo/resp3 HTTP/1.1" 200 15 http-bio-8080-exec-6 7
+0:0:0:0:0:0:0:1 - - [17/Feb/2023:23:59:27 +0800] "GET /request-demo/resp3 HTTP/1.1" 200 15 http-bio-8080-exec-3 218
+0:0:0:0:0:0:0:1 - - [17/Feb/2023:23:59:36 +0800] "GET /request-demo/resp3 HTTP/1.1" 200 15 http-bio-8080-exec-6 5
