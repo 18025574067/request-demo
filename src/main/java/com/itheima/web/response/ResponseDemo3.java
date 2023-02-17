@@ -6,30 +6,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
- * 重定向
+ * 响应字符数据： 设置字符数据的响应体。
  */
-@WebServlet("/resp1")
-public class ResponseDemo1 extends HttpServlet {
+@WebServlet("/resp3")
+public class ResponseDemo3 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("resp1...");
-
-        // 重定向
-//        // 1. 设置响应状态码：302
-//        resp.setStatus(302);
-//
-//        // 2. 设置响应头：location
-//        resp.setHeader("location", "/request-demo/resp2");
-
-        // 重定向简化写法
-        // 动态获取虚拟目录
-        String path = req.getContextPath();
-
-        resp.sendRedirect(path + "/resp2");
-//        resp.sendRedirect("https://www.itcast.cn");
+        // 获取字符输出流
+        PrintWriter writer = resp.getWriter();
+        writer.write("aaa");
+        writer.write("<h1>aaa</h1>");
     }
 
     @Override
