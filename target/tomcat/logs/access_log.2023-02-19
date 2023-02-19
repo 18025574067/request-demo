@@ -16,3 +16,5 @@
 0:0:0:0:0:0:0:1 - - [19/Feb/2023:15:46:18 +0800] "GET /request-demo/resp3 HTTP/1.1" 200 27 http-bio-8080-exec-3 7
 0:0:0:0:0:0:0:1 - - [19/Feb/2023:15:46:23 +0800] "GET /request-demo/resp4 HTTP/1.1" 200 277551 http-bio-8080-exec-4 2
 0:0:0:0:0:0:0:1 - - [19/Feb/2023:15:48:26 +0800] "GET /request-demo/resp4 HTTP/1.1" 200 277551 http-bio-8080-exec-1 82
+0:0:0:0:0:0:0:1 - - [19/Feb/2023:17:08:30 +0800] "GET /request-demo HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [19/Feb/2023:17:08:30 +0800] "GET /request-demo/ HTTP/1.1" 200 52 http-bio-8080-exec-3 113
