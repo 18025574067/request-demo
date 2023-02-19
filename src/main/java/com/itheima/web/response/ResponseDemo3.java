@@ -16,10 +16,18 @@ public class ResponseDemo3 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html; charset=utf-8");
         // 获取字符输出流
         PrintWriter writer = resp.getWriter();
-        writer.write("aaa");
+
+        // content-type
+//        resp.setHeader("content-type", "text/html");
+        writer.write("忠诚汽修厂");
         writer.write("<h1>aaa</h1>");
+
+        // 细节： 1. 流不需要关闭，随着响应结束，resp对象被销毁，由服务器关闭。
+        //       2. 中文会乱码：默认为ISO-8859-1
+
     }
 
     @Override
