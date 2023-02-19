@@ -1,1 +1,3 @@
-com/itheima/web/response/ResponseDemo4.class
+com\itheima\pojo\User.class
+com\itheima\web\response\ResponseDemo4.class
+com\itheima\mapper\UserMapper.class
