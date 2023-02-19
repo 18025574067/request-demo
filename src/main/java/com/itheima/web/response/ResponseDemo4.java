@@ -1,5 +1,7 @@
 package com.itheima.web.response;
 
+import org.apache.commons.io.IOUtils;
+
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -26,12 +28,13 @@ public class ResponseDemo4 extends HttpServlet {
         ServletOutputStream os = resp.getOutputStream();
 
         // 3. 完成流的copy
-        byte[] buff = new byte[1024];
-        int len = 0;
-        while ((len = fis.read(buff))!= -1){
-            os.write(buff, 0, len);
-        }
+//        byte[] buff = new byte[1024];
+//        int len = 0;
+//        while ((len = fis.read(buff))!= -1){
+//            os.write(buff, 0, len);
+//        }
 
+        IOUtils.copy(fis, os);
         fis.close();
     }
 
